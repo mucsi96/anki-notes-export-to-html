@@ -1,0 +1,48 @@
+body {
+  font-size: 6pt;
+}
+
+.node {
+  display: grid;
+  grid-template-areas:
+    "word translation"
+    "wordForms type"
+    "exampleSentence translatedExampleSentence";
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1em;
+  row-gap: 0.2em;
+  padding: 0.5em;
+  font-family: system-ui;
+  break-inside: avoid;
+}
+
+.type {
+  grid-area: type;
+  font-style: italic;
+}
+
+.word {
+  grid-area: word;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.translation {
+  grid-area: translation;
+  font-size: 1.2em;
+}
+
+.wordForms {
+  grid-area: wordForms;
+  text-align: right;
+}
+
+.exampleSentence {
+  grid-area: exampleSentence;
+  text-align: right;
+}
+
+.translatedExampleSentence {
+  grid-area: translatedExampleSentence;
+}
